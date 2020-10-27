@@ -1,0 +1,24 @@
+<div class="content">
+
+  <h2 *ngIf="actionType==='Add'">New Tournament</h2>
+  <h2 *ngIf="actionType==='Edit'">Edit Tournament {{tournament?.tournamentName}}</h2>
+
+  <br />
+
+  <form>
+    <div class="form-group">
+      <label for="name">Tournament name:</label>
+      <input name="name" required type="text" [(ngModel)]="tournament.tournamentName" />
+    </div>
+    <div class="form-group">
+      <label for="desc">Tournament description:</label>
+      <input name="desc" type="text" [(ngModel)]="tournament.tournamentDesc" />
+    </div>
+
+    <br />
+
+    <button class="pimary-button" style="float:right" (click)="cancel()">Cancel</button>
+    <button class="pimary-button" style="float:right" (click)="persistTournament()">Save</button>
+  </form>
+
+</div>

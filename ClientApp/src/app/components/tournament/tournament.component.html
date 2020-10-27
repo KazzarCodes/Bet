@@ -1,0 +1,26 @@
+<div class="content">
+
+  <h2>Tournaments</h2>
+  <br />
+
+  <button class="pimary-button" style="float:right" (click)="newTournament()">New Tournament</button>
+  <br />
+  <br />
+
+  <div *ngFor="let model of tournaments">
+
+    <a class="card" (click)="viewTournament(model.tournamentId)">
+      <h3>{{ model.tournamentName }}</h3>
+      <p class="small">{{ model.tournamentDesc }}</p>
+      <div class="go-corner" href="#">
+        <div class="go-arrow">
+          →
+        </div>
+      </div>
+    </a>
+    <button class="pimary-button" style="float:left" (click)="editTournament(model.tournamentId)">Edit</button>
+    <button class="delete-button" style="float:left" (click)="deleteTournament(model.tournamentId)">Delete</button>
+    <br />
+    <br />
+
+  </div>

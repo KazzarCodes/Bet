@@ -1,0 +1,35 @@
+<div class="content">
+
+  <h2 *ngIf="actionType==='Add'">New Event</h2>
+  <h2 *ngIf="actionType==='Edit'">Edit Event {{event?.eventName}}</h2>
+
+  <br />
+
+  <form>
+    <div class="form-group">
+      <label for="name">Event name:</label>
+      <input name="name" type="text" [(ngModel)]="event.eventName" />
+    </div>
+    <div class="form-group">
+      <label for="number">Event number:</label>
+      <input name="number" type="number" [(ngModel)]="event.eventNumber" />
+    </div>
+    <div class="form-group">
+      <label for="startDate">Start date:</label>
+      <input name="startDate" type="date" [(ngModel)]="event.eventDateTime" />
+    </div>
+    <div class="form-group">
+      <label for="endDate">End date:</label>
+      <input name="endDate" type="date" [(ngModel)]="event.eventEndDateTime" />
+    </div>
+    <div class="form-group">
+      <label class="checkbox-inline"><input name="autoClose" type="checkbox" [(ngModel)]="event.autoClose"> Auto close</label>
+    </div>
+
+    <br />
+
+    <button class="pimary-button" style="float:right" (click)="cancel()">Cancel</button>
+    <button class="pimary-button" style="float:right" (click)="persistEvent()">Save</button>
+  </form>
+
+</div>

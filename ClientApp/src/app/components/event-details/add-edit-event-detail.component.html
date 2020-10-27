@@ -1,0 +1,39 @@
+<div class="content">
+
+  <h2 *ngIf="actionType==='Add'">New Event Detail</h2>
+  <h2 *ngIf="actionType==='Edit'">Edit Event Detail {{eventDetail?.eventDetailName}}</h2>
+
+  <br />
+
+  <form>
+    <div class="form-group">
+      <label for="name">Event detail name:</label>
+      <input name="name" type="text" class="form-control" [(ngModel)]="eventDetail.eventDetailName" />
+    </div>
+    <div class="form-group">
+      <label for="number">Status:</label>
+      <select id="status" name="status" class="form-control" [(ngModel)]="eventDetail.eventDetailStatusId">
+        <option [ngValue]="option.eventDetailStatusId" *ngFor="let option of statuses">
+          {{option.eventDetailStatusName}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="odds">Odds:</label>
+      <input name="odds" type="number" class="form-control" [(ngModel)]="eventDetail.eventDetailOdd" />
+    </div>
+    <div class="form-group">
+      <label for="fpostion">Finishing Position:</label>
+      <input name="fpostion" type="number" class="form-control" [(ngModel)]="eventDetail.finishingPosition" />
+    </div>
+    <div class="form-group">
+      <label class="checkbox-inline"><input name="firstTimer" type="checkbox" class="form-control" [(ngModel)]="eventDetail.firstTimer"> First timer</label>
+    </div>
+
+    <br />
+
+    <button class="pimary-button" style="float:right" (click)="cancel()">Cancel</button>
+    <button class="pimary-button" style="float:right" (click)="persistEventDetail()">Save</button>
+  </form>
+
+</div>
