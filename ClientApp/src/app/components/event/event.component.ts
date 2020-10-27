@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 import { EventModel } from "../../models/event.model";
 import { EventService } from "../../services/event.service";
 import { TournamentModel } from "../../models/tournament.model";
+import { DatePipe } from "@angular/common";
 
 @Component({
   selector: 'event',
@@ -20,6 +21,7 @@ export class EventComponent {
 
   constructor(private _eventService: EventService,
     private _tournamentService: TournamentService,
+    private _datePipe: DatePipe,
     private _router: Router,
     private _avRoute: ActivatedRoute) {
 
@@ -28,6 +30,7 @@ export class EventComponent {
     if (this._avRoute.snapshot.params[idParam]) {
       this._tournamentId = this._avRoute.snapshot.params[idParam];
     }
+
   }
 
   ngOnInit() {
@@ -40,7 +43,6 @@ export class EventComponent {
       .subscribe((data: EventModel[]) => {
         this.events = data;
       });
-
   }
 
   private getParentTournament() {

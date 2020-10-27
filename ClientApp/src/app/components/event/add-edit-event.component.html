@@ -7,23 +7,23 @@
 
   <form>
     <div class="form-group">
-      <label for="name">Event name:</label>
-      <input name="name" type="text" [(ngModel)]="event.eventName" />
+      <label class="label">Event name:</label>
+      <input name="name" type="text" class="form-control" [(ngModel)]="event.eventName" />
     </div>
     <div class="form-group">
-      <label for="number">Event number:</label>
-      <input name="number" type="number" [(ngModel)]="event.eventNumber" />
+      <label for="number" class="label">Event number:</label>
+      <input name="number" type="number" class="form-control" [(ngModel)]="event.eventNumber" />
     </div>
     <div class="form-group">
-      <label for="startDate">Start date:</label>
-      <input name="startDate" type="date" [(ngModel)]="event.eventDateTime" />
+      <label for="startDate" class="label">Start date:</label>
+      <input name="startDate" type="date" class="form-control" format="dd-MM-yyyy hh:mm" [(ngModel)]="event.eventDateTime" />
     </div>
     <div class="form-group">
-      <label for="endDate">End date:</label>
-      <input name="endDate" type="date" [(ngModel)]="event.eventEndDateTime" />
+      <label for="endDate" class="label">End date:</label>
+      <input name="endDate" type="date" class="form-control" style="max-width:400px" data-format="dd-MM-yyyy hh:mm" [(ngModel)]="event.eventEndDateTime" />
     </div>
     <div class="form-group">
-      <label class="checkbox-inline"><input name="autoClose" type="checkbox" [(ngModel)]="event.autoClose"> Auto close</label>
+      <label class="checkbox-inline"><input name="autoClose" type="checkbox" [(ngModel)]="event.autoClose"> <span class="label" style="padding:20px">Auto close</span></label>
     </div>
 
     <br />

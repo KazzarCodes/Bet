@@ -16,14 +16,14 @@
         <label for="{{model.eventId}}"><span></span>{{model.eventName}} - {{model.eventNumber}}</label>
         <article>
           <div>
-            <h5>Start Date: {{model.eventDateTime}}</h5>
-            <h5>End Date: {{model.eventEndDateTime}}</h5>
+            <h5>Start Date: {{model.eventDateTime | date: 'dd-MMM-yyyy hh:mm'}}</h5>
+            <h5>End Date: {{model.eventEndDateTime | date: 'dd-MMM-yyyy hh:mm'}}</h5>
             <h5>Auto Close: {{model.autoClose}}</h5>
           </div>
           <br />
           <div>
-            <button class="pimary-button" style="float:right" (click)="viewEvent(model.eventId)">View Details</button>
-            <button class="pimary-button" style="float:right" (click)="editEvent(model.eventId)">Edit</button>
+            <button class="edit-button" style="float:right" (click)="viewEvent(model.eventId)">View Details</button>
+            <button class="edit-button" style="float:right" (click)="editEvent(model.eventId)">Edit</button>
             <button class="delete-button" style="float:right" (click)="deleteEvent(model.eventId)">Delete</button>
           </div>
         </article>

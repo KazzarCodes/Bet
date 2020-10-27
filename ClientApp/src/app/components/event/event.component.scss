@@ -12,7 +12,9 @@ input.accordion {
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
-    padding-left: $text-padding;
+    color: #00838d;
+    text-align: left;
+    font-family: 'Roboto',sans-serif;
     // Add the '+' sign
     span::before {
       color: $accent-color;
@@ -63,4 +65,10 @@ section {
   &:first-of-type {
     padding-top: 0;
   }
+}
+
+title {
+  color: #00838d;
+  text-align: left;
+  font-family: 'Roboto',sans-serif;
 }

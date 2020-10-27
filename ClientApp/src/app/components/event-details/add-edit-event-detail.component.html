@@ -7,11 +7,11 @@
 
   <form>
     <div class="form-group">
-      <label for="name">Event detail name:</label>
+      <label for="name" class="label">Event detail name:</label>
       <input name="name" type="text" class="form-control" [(ngModel)]="eventDetail.eventDetailName" />
     </div>
     <div class="form-group">
-      <label for="number">Status:</label>
+      <label for="number" class="label">Status:</label>
       <select id="status" name="status" class="form-control" [(ngModel)]="eventDetail.eventDetailStatusId">
         <option [ngValue]="option.eventDetailStatusId" *ngFor="let option of statuses">
           {{option.eventDetailStatusName}}
@@ -19,15 +19,15 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="odds">Odds:</label>
+      <label for="odds" class="label">Odds:</label>
       <input name="odds" type="number" class="form-control" [(ngModel)]="eventDetail.eventDetailOdd" />
     </div>
     <div class="form-group">
-      <label for="fpostion">Finishing Position:</label>
+      <label for="fpostion" class="label">Finishing Position:</label>
       <input name="fpostion" type="number" class="form-control" [(ngModel)]="eventDetail.finishingPosition" />
     </div>
     <div class="form-group">
-      <label class="checkbox-inline"><input name="firstTimer" type="checkbox" class="form-control" [(ngModel)]="eventDetail.firstTimer"> First timer</label>
+      <label class="checkbox-inline"><input name="firstTimer" type="checkbox" [(ngModel)]="eventDetail.firstTimer"> <span class="label" style="padding:20px">First timer</span></label>
     </div>
 
     <br />

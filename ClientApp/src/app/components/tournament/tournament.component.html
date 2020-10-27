@@ -1,6 +1,6 @@
 <div class="content">
 
-  <h2>Tournaments</h2>
+  <br />
   <br />
 
   <button class="pimary-button" style="float:right" (click)="newTournament()">New Tournament</button>
@@ -17,10 +17,11 @@
           →
         </div>
       </div>
+      <div>
+        <button class="edit-button" (click)="editTournament(model.tournamentId);$event.stopPropagation()">Edit</button>
+        <button class="delete-button" (click)="deleteTournament(model.tournamentId);$event.stopPropagation()">Delete</button>
+      </div>
+
     </a>
-    <button class="pimary-button" style="float:left" (click)="editTournament(model.tournamentId)">Edit</button>
-    <button class="delete-button" style="float:left" (click)="deleteTournament(model.tournamentId)">Delete</button>
-    <br />
-    <br />
 
   </div>

@@ -15,6 +15,7 @@ import { AddEditEventDetailComponent } from './components/event-details/add-edit
 import { EventDetailService } from './services/event-detail.service';
 import { EventDetailStatusService } from './services/event-detail-status.service';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
     TournamentService,
     EventService,
     EventDetailService,
-    EventDetailStatusService
+    EventDetailStatusService,
+    DatePipe,
   ],
   bootstrap: [AppComponent]
 })
